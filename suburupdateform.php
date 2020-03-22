@@ -1,7 +1,7 @@
 <?php
 include './innconeksi.php';
-$daerah= $_GET["daerah"];
-$query = "SELECT * FROM suburr WHERE daerah='$daerah'";
+$idurut = $_GET['idurut'];
+$query = "SELECT * FROM suburr WHERE idurut='$idurut'";
 $result = mysqli_query($connect, $query);
 $row = $result->fetch_assoc();
 ?>
@@ -34,7 +34,7 @@ $row = $result->fetch_assoc();
  <br>
  <br>
  <div class="jumbotron">
-      <h1 class="display-4">Tambah Data ! </h1>
+      <h1 class="display-4">Update Data ! </h1>
 
       <br>
       <br>
@@ -45,21 +45,21 @@ $row = $result->fetch_assoc();
   
   <div class="form-group">
       <label for="daerah">daerah:</label>
-      <input type="text" class="form-control" id="daerah" placeholder="Enter daerah" name="daerah"value="<?php echo $row['kepala'];?>" >
+      <input type="text" class="form-control" name="daerah" placeholder="Enter daerah" value="<?php echo $row['daerah'];?>" >
     </div>
     <div class="form-group">
       <label for="kadarair">kadar air:</label>
-      <input type="text" class="form-control" id="kadarair" placeholder="Enter kadar air(%)" name="kadarair">
+      <input type="text" class="form-control" name="kadarair" placeholder="Enter kadar air(%)" value="<?php echo $row['kadarair'];?>">
     </div>
     <div class="form-group">
       <label for="hasilpanen">lahan panen:</label>
-      <input type="text" class="form-control" id="hasilpanen" placeholder="Enter lahan panen(hektar)" name="hasilpanen">
+      <input type="text" class="form-control" name="hasilpanen" placeholder="Enter lahan panen(hektar)" value="<?php echo $row['hasilpanen'];?>">
     </div>
     <div class="form-group">
       <label for="kadarkekeringan">kadar kekeringan:</label>
-      <input type="text" class="form-control" id="kadarkekeringan" placeholder="Enter Kadar kekeringan(%)" name="kadarkekeringan">
+      <input type="text" class="form-control" name="kadarkekeringan" placeholder="Enter Kadar kekeringan(%)" value="<?php echo $row['kadarkekeringan'];?>">
     </div>
-    <td><input type="hidden" name="daerah" value="<?php echo $row['daerah'];?>"></td>
+    <td><input type="hidden" name='idurut' value="<?php echo $row['idurut'];?>"></td>
     <button type="submit" class="btn btn-primary" value="simpan"  >Submit</button>
   </form>
 </div>

@@ -1,14 +1,13 @@
 <?php
 include './innconeksi.php';
-
-$no= $_POST["nokk"];
+$nokk= $_POST["nokk"];
 $nama= $_POST["kepala"];
 $alamat= $_POST["alamat"];
 $sudah= $_POST["sudah_menikah"];
 $belum= $_POST["belum_menikah"];
 
-$query = "INSERT INTO penduduk (nokk, kepala, alamat, sudah_menikah, belum_menikah )
-          VALUES ('$no','$nama','$alamat','$sudah','$belum')";
+$query = "INSERT INTO penduduk ( nokk, kepala, alamat, sudah_menikah, belum_menikah )
+          VALUES ('$nokk','$nama','$alamat','$sudah','$belum')";
 $result = mysqli_query($connect, $query);
 $num  =mysqli_affected_rows($connect);
 if($num>0){

@@ -34,6 +34,7 @@
 <div class="container">
   <h2>fill the form</h2>
   <form action="tambahpost.php" method="POST">
+ 
 <div class="form-group">
       <label for="nokk">No.Kartu Keluarga:</label>
       <input type="text" class="form-control" id="nokk" placeholder="Enter no. kartu keluarga" name="nokk">

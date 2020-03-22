@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 21, 2020 at 07:11 AM
+-- Generation Time: Mar 22, 2020 at 06:25 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `produksii` (
+  `urut` int(100) NOT NULL,
   `produk` varchar(100) NOT NULL,
   `a2019` varchar(100) NOT NULL,
   `a2018` varchar(100) NOT NULL
@@ -38,11 +39,10 @@ CREATE TABLE `produksii` (
 -- Dumping data for table `produksii`
 --
 
-INSERT INTO `produksii` (`produk`, `a2019`, `a2018`) VALUES
-('gula', '135123', '456675'),
-('kayu', '506987', '768900'),
-('padi', '345', '567'),
-('susu', '1236', '5678');
+INSERT INTO `produksii` (`urut`, `produk`, `a2019`, `a2018`) VALUES
+(4, 'cabe', '345', '567'),
+(5, 'kunyit', '1236', '5678'),
+(6, 'kayumasin', '123', '134');
 
 --
 -- Indexes for dumped tables
@@ -52,7 +52,17 @@ INSERT INTO `produksii` (`produk`, `a2019`, `a2018`) VALUES
 -- Indexes for table `produksii`
 --
 ALTER TABLE `produksii`
-  ADD PRIMARY KEY (`produk`);
+  ADD PRIMARY KEY (`urut`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `produksii`
+--
+ALTER TABLE `produksii`
+  MODIFY `urut` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

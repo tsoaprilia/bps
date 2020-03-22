@@ -65,8 +65,8 @@ while($data = mysqli_fetch_array ($sql)){
   echo "<td>",$data ['alamat']."</td>";
   echo "<td>",$data ['sudah_menikah']."</td>";
   echo "<td>",$data ['belum_menikah']."</td>";
-  echo "<td> <a href='updateform.php?nama=".$data['nokk']."'>EDIT</a></td>";
-  echo "<td><a href='hapus.php?nama=".$data['nokk']."'onclick='return confirm(\"apakah anda yakin ingin menghapus data?\")'>delete</a></td>";
+  echo "<td> <a href='updateform.php?idd=".$data['idd']."'>EDIT</a></td>";
+  echo "<td><a href='hapus.php?idd=".$data['idd']."'onclick='return confirm(\"apakah anda yakin ingin menghapus data?\")'>delete</a></td>";
   echo "</tr>";
 }
 ?>

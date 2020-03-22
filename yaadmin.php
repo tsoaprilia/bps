@@ -43,8 +43,11 @@
   </div>  
 </nav>
  <br>
- <br>
  <div class="jumbotron">
+ <p>INFO! Disini kami menyediakan informasi yaitu : 'Data Penduduk' , 'Data tingkat kesuburan tanah' , ' Data perkembangan ternak & pertanian'</p>
+ <p>KUNJUNGI! klik di "Data Resmi Statistik"</p>
+ <br>
+ <br>
       <h1 class="display-4">Selamat Datang! </h1>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data Penduduk Kota Malang
       <br>

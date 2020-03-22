@@ -17,7 +17,7 @@
 </div>
  <br>
  <nav class="navbar navbar-expand-sm bg-dark text-center navbar-dark ">
-  <a class="navbar-brand text-center" >DATA PENDUDUK</a>
+  <a class="navbar-brand text-center" >DATA PERKEMBANGAN TERNAK DAN PERTANIAN</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>  
@@ -57,8 +57,8 @@ while($data = mysqli_fetch_array ($sql)){
   echo "<td>",$data ['produk']."</td>";
   echo "<td>",$data ['a2019']."</td>";
   echo "<td>",$data ['a2018']."</td>";
-  echo "<td> <a href='taniupdateform.php?nama=".$data['produk']."'>EDIT</a></td>";
-  echo "<td><a href='tanihapus.php?nama=".$data['produk']."'onclick='return confirm(\"apakah anda yakin ingin menghapus data?\")'>delete</a></td>";
+  echo "<td> <a href='taniupdateform.php?urut=".$data['urut']."'>EDIT</a></td>";
+  echo "<td><a href='tanihapus.php?urut=".$data['urut']."'onclick='return confirm(\"apakah anda yakin ingin menghapus data?\")'>delete</a></td>";
   echo "</tr>";
 }
 ?>

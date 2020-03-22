@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 21, 2020 at 07:12 AM
+-- Generation Time: Mar 22, 2020 at 06:25 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `suburr` (
+  `idurut` int(100) NOT NULL,
   `daerah` varchar(100) NOT NULL,
   `kadarair` varchar(100) NOT NULL,
   `hasilpanen` varchar(100) NOT NULL,
@@ -39,11 +40,11 @@ CREATE TABLE `suburr` (
 -- Dumping data for table `suburr`
 --
 
-INSERT INTO `suburr` (`daerah`, `kadarair`, `hasilpanen`, `kadarkekeringan`) VALUES
-('bululawang', '89%', '78hektra', '35%'),
-('mojosari', '67%', '123hektar', '4%'),
-('pakis', '80%', '145hektar', '`12%'),
-('sawojajar', '78%', '123hektar', '14%');
+INSERT INTO `suburr` (`idurut`, `daerah`, `kadarair`, `hasilpanen`, `kadarkekeringan`) VALUES
+(3, 'pakis', '80%', '145hektar', '`12%'),
+(4, 'pakis', '78%', '123hektar', '14%'),
+(5, 'wajak', '76%', '125hektar', '5%'),
+(6, 'pok', '35%', '13hektar', '25%');
 
 --
 -- Indexes for dumped tables
@@ -53,7 +54,17 @@ INSERT INTO `suburr` (`daerah`, `kadarair`, `hasilpanen`, `kadarkekeringan`) VAL
 -- Indexes for table `suburr`
 --
 ALTER TABLE `suburr`
-  ADD PRIMARY KEY (`daerah`);
+  ADD PRIMARY KEY (`idurut`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `suburr`
+--
+ALTER TABLE `suburr`
+  MODIFY `idurut` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

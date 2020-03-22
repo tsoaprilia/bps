@@ -1,8 +1,8 @@
 <?php
 include './innconeksi.php';
-$nama= $_GET["kepala"];
+$idd=$_GET['idd'];
 
-$query = "SELECT * FROM penduduk WHERE kepala='$nama'";
+$query = "SELECT * FROM penduduk WHERE idd='$idd'";
 $result = mysqli_query($connect, $query);
 $row = $result->fetch_assoc();
 ?>
@@ -18,6 +18,7 @@ $row = $result->fetch_assoc();
  
 </head>
 <body>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -35,7 +36,7 @@ $row = $result->fetch_assoc();
  <br>
  <br>
  <div class="jumbotron">
-      <h1 class="display-4">Tambah Data ! </h1>
+      <h1 class="display-4">Update Data ! </h1>
 
       <br>
       <br>
@@ -45,21 +46,22 @@ $row = $result->fetch_assoc();
 
   <div class="form-group">
       <label for="kepala">Nama Kepala Keluarga:</label>
-      <input type="text" class="form-control" id="kepala" placeholder="Enter nama kepala keluarga" value="<?php echo $row['kepala'];?>">
+      <input type="text" class="form-control" name="kepala" placeholder="Enter nama kepala keluarga" value="<?php echo $row['kepala'];?>">
     </div> 
+    
     <div class="form-group">
       <label for="alamat">Alamat:</label>
-      <input type="text" class="form-control" id="alamat" placeholder="Enter Alamat" value="<?php echo $row['alamat'];?>">
+      <input type="text" class="form-control" name="alamat" placeholder="Enter Alamat" value="<?php echo $row['alamat'];?>">
     </div>
     <div class="form-group">
       <label for="sudah_menikah">Jumlah Anggota Keluarga sudah menikah:</label>
-      <input type="text" class="form-control" id="sudah_menikah" placeholder="Enter Jumlah yang sudah menikah" value="<?php echo $row['sudah_menikah'];?>">
+      <input type="text" class="form-control" name="sudah_menikah" placeholder="Enter Jumlah yang sudah menikah" value="<?php echo $row['sudah_menikah'];?>">
     </div>
     <div class="form-group">
       <label for="belum_menikah">Jumlah Anggota Keluarga belum menikah:</label>
-      <input type="text" class="form-control" id="belum_menikah" placeholder="Enter Jumlah yang belum menikah" value="<?php echo $row['belum_menikah'];?>">
+      <input type="text" class="form-control" name="belum_menikah" placeholder="Enter Jumlah yang belum menikah" value="<?php echo $row['belum_menikah'];?>">
     </div>
-    <td><input type="hidden" name="kepala" value="<?php echo $row['kepala'];?>"></td>
+    <td><input type="hidden" name="idd" value="<?php echo $row['idd'];?>"></td>
     <button type="submit" class="btn btn-primary" value="simpan"  >Submit</button>
   </form>
 </div>

@@ -46,6 +46,7 @@
  <br>
  <br>
  <div class="jumbotron">
+ <P>INFO! untuk mendapat informasi lebih lengkap klik "Data Resmi Statistik"</P>
       <h1 class="display-4">Selamat Datang! </h1>
       <center><h2> Data Penduduk</h2>
 <table border="1" width="70%" ></center>

@@ -1,8 +1,8 @@
 
 <?php
 include './innconeksi.php';
-$jenins = $_GET["produk"];
-$query = "SELECT * FROM produksii WHERE produk='$jenins'";
+$urut= $_GET['urut'];
+$query = "SELECT * FROM produksii WHERE urut='$urut'";
 $result = mysqli_query($connect, $query);
 $row = $result -> fetch_assoc();
 ?>
@@ -34,7 +34,7 @@ $row = $result -> fetch_assoc();
  <br>
  <br>
  <div class="jumbotron">
-      <h1 class="display-4">Tambah Data ! </h1>
+      <h1 class="display-4">Update Data ! </h1>
 
       <br>
       <br>
@@ -45,17 +45,17 @@ $row = $result -> fetch_assoc();
   
   <div class="form-group">
       <label for="produk">jenisproduk:</label>
-      <input type="text" class="form-control" id="produk" placeholder="Enter jenis Produk" name="produk" value="<?php echo $row['produk'];?>">
+      <input type="text" class="form-control" name="produk" placeholder="Enter jenis Produk" name="produk" value="<?php echo $row['produk'];?>">
     </div>
     <div class="form-group">
       <label for="a2019">2019:</label>
-      <input type="text" class="form-control" id="a2019" placeholder="Enter jumlah (ton)" name="a2019" value="<?php echo $row['a2019'];?>">
+      <input type="text" class="form-control" name="a2019" placeholder="Enter jumlah (ton)" name="a2019" value="<?php echo $row['a2019'];?>">
     </div>
     <div class="form-group">
       <label for="a2018">2020:</label>
-      <input type="text" class="form-control" id="a2018" placeholder="Enter Jumlah (ton)" name="a2018" value="<?php echo $row['a2020'];?>">
+      <input type="text" class="form-control" name="a2018" placeholder="Enter Jumlah (ton)" name="a2018" value="<?php echo $row['a2018'];?>">
     </div>
-    <td><input type="hidden" name="daerah" value="<?php echo $row['daerah'];?>"></td>
+    <td><input type="hidden" name='urut' value="<?php echo $row['urut'];?>"></td>
     <button type="submit" class="btn btn-primary" value="simpan"  >Submit</button>
   </form>
 </div>

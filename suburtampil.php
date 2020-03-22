@@ -17,7 +17,7 @@
 </div>
  <br>
  <nav class="navbar navbar-expand-sm bg-dark text-center navbar-dark ">
-  <a class="navbar-brand text-center" >DATA PENDUDUK</a>
+  <a class="navbar-brand text-center" >DATA TINGKAT KESUBURAN TANAH</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>  
@@ -59,8 +59,8 @@ while($data = mysqli_fetch_array ($sql)){
   echo "<td>",$data ['kadarair']."</td>";
   echo "<td>",$data ['hasilpanen']."</td>";
   echo "<td>",$data ['kadarkekeringan']."</td>";
-  echo "<td> <a href='suburupdateform.php?nama=".$data['daerah']."'>EDIT</a></td>";
-  echo "<td><a href='suburhapus.php?nama=".$data['daerah']."'onclick='return confirm(\"apakah anda yakin ingin menghapus data?\")'>delete</a></td>";
+  echo "<td> <a href='suburupdateform.php?idurut=".$data['idurut']."'>EDIT</a></td>";
+  echo "<td><a href='suburhapus.php?idurut=".$data['idurut']."'onclick='return confirm(\"apakah anda yakin ingin menghapus data?\")'>delete</a></td>";
   echo "</tr>";
 }
 ?>

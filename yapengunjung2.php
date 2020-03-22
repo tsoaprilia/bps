@@ -42,7 +42,9 @@
 
       <br>
       <br>
-      <div class="iya">
+      <div class="jumbotron">
+ <P>INFO! untuk mendapat informasi lebih lengkap klik "Data Resmi Statistik"</P>
+      <h1 class="display-4">Selamat Datang! </h1>
 
 
 <center><h2> Tingkat Kesuburan Tanah</h2>

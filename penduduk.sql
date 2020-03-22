@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 21, 2020 at 07:11 AM
+-- Generation Time: Mar 22, 2020 at 06:24 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `penduduk` (
+  `idd` int(100) NOT NULL,
   `nokk` varchar(100) NOT NULL,
   `kepala` varchar(100) NOT NULL,
   `alamat` varchar(100) NOT NULL,
@@ -40,15 +41,16 @@ CREATE TABLE `penduduk` (
 -- Dumping data for table `penduduk`
 --
 
-INSERT INTO `penduduk` (`nokk`, `kepala`, `alamat`, `sudah_menikah`, `belum_menikah`) VALUES
-('34543565653', 'ghf', 'hgf', 4, 1),
-('350670207405', 'ibnu', 'Malang  jl.masuk no.8', 2, 2),
-('433545667', 'trytr', 'ryeyy', 3, 2),
-('4738864647832768764', 'ajat', 'Maalng swojajar ', 2, 1),
-('5466673460899', 'tfyl', 'Malangg jl.pintukeluar', 3, 1),
-('56367517332732523', 'hujan', 'Malang pakis sawojajar', 2, 1),
-('86119179216671275', 'ahggs', 'Malang jl.masuklurus kelua no.90', 2, 2),
-('908790560406', 'falah', 'Malang  jl.keluar no.13', 3, 2);
+INSERT INTO `penduduk` (`idd`, `nokk`, `kepala`, `alamat`, `sudah_menikah`, `belum_menikah`) VALUES
+(4, '1553546453663623', 'nkgitonb', 'gkitj', 3, 4),
+(5, '575786989789796967', 'mnvjhjfutb', 'huhugbv', 2, 5),
+(6, '2453425264352464', 'turuuty', 'ijifhuv', 2, 7),
+(7, '27637644536354621', 'jjhibtu', 'jrjjhtg', 3, 6),
+(8, '675632323213455', 'bubvuvhi', 'jojoygu', 2, 1),
+(9, '453222131655887', 'ansu', 'njnsi', 2, 1),
+(10, '343354657578764', 'jntjig', 'jniir', 2, 3),
+(11, '123423425556', 'jnixti', 'jigj', 3, 3),
+(12, '65874392554', 'bukan', 'mlanag', 2, 1);
 
 --
 -- Indexes for dumped tables
@@ -58,8 +60,18 @@ INSERT INTO `penduduk` (`nokk`, `kepala`, `alamat`, `sudah_menikah`, `belum_meni
 -- Indexes for table `penduduk`
 --
 ALTER TABLE `penduduk`
-  ADD PRIMARY KEY (`nokk`),
+  ADD PRIMARY KEY (`idd`),
   ADD KEY `nama_kepala_keluarga` (`kepala`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `penduduk`
+--
+ALTER TABLE `penduduk`
+  MODIFY `idd` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
